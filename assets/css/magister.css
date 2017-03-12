@@ -1,21 +1,22 @@
 html {
-	background:#505D6E url() no-repeat center center fixed; 
+	background:#505D6E url(../images/body1.jpg) no-repeat center center fixed; 
 	min-height:100%;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 	     -o-background-size: cover;
 	        background-size: cover;
-	
 }
 
 body {
 	background:transparent;
-	min-height:100%;
-
+	min-height:100%; 	
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
 	line-height: 1.5em;
 	font-size:14px;
 	font-family: Helvetica, Arial, sans-serif;
-	
+	color:#fff;
+	color:rgba(255,255,255,.8); 
 	font-weight: normal;
 }
 
@@ -23,15 +24,14 @@ body {
 /********************************************************/
 /*                    Navigation bar                    */
 /********************************************************/
-
 .mainmenu { z-index: 999999; width:100%;  padding: 30px 0 0 0;}
 @media (min-width: 768px) {
 	.mainmenu { position: fixed; }
 }
 
 .navbar-toggle {
-	position: relative;
-	float: left;
+	position:relative;
+	float:left;
 	display:block;
 	padding: 9px 10px;
 	background: rgba(255, 255, 255, 0.2);
@@ -45,7 +45,7 @@ body {
 	opacity: 1;
 	-webkit-transition: all .45s;
 	   -moz-transition: all .45s;
-	   		transition: all .45s;
+	        transition: all .45s;
 	        float: left;
 }
 .navbar-toggle .icon-bar {
@@ -104,7 +104,6 @@ body {
 /********************************************************/
 /*             Sections - universal classes             */
 /********************************************************/
-
 .section { 
 	z-index: 1;
 	min-height:420px;
@@ -115,6 +114,7 @@ body {
 	padding-bottom:50px; 
 	display:none;
 	top:0;
+	text-align: center;
 } 
 @media (min-width: 768px) {
 	.section { padding-top:160px;}
@@ -129,7 +129,6 @@ body {
 /********************************************************/
 /*                      Typography                      */
 /********************************************************/
-
 a { color:#fff; text-decoration: none; }
 a:hover, a:active { color:#fff; text-decoration: underline; }
 .lead { 
@@ -138,7 +137,7 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	line-height:1.2em;
 }
 
-.title,
+.title, 
 .subtitle { 
 	font-family: 'Wire One', Helvetica, Arial, sans-serif;
 	font-weight:normal;
@@ -146,6 +145,8 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	margin-bottom:15px; 
 	color:#FDF9F4; 
 	line-height:1em;
+	padding-bottom: 10px;
+
 }
 .subtitle { 
 	line-height:.9em;
@@ -170,7 +171,6 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 /********************************************************/
 /*                   UI - Buttons                       */
 /********************************************************/
-
 .btn{
 	color:#333;
 	text-shadow: none;
@@ -212,214 +212,16 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 /********************************************************/
 /*                 UI - Thumbnails                      */
 /********************************************************/
-
-
-
-/* ================ Timeline Media Queries ================ */
-
-@media screen and (max-width: 660px) {
-
-.timeline {
-    width: 100%;
-    padding: 4em 0 1em 0;
+.thumbnail {
+	background-color: rgba(255,255,255,.2);
+	border: 0 none;
+	padding:10px;
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
 }
-
-.timeline li {
-    padding: 2em 0;
-}
-
-.direction-l,
-.direction-r {
-    float: none;
-    width: 100%;
-
-    text-align: center;
-}
-
-.flag-wrapper {
-    text-align: center;
-}
-
-.flag {
-    background: rgb(255,255,255);
-    z-index: 15;
-}
-
-.direction-l .flag:before,
-.direction-r .flag:before {
-  position: absolute;
-  top: -30px;
-    left: 50%;
-    content: ' ';
-    display: block;
-    width: 12px;
-    height: 12px;
-    margin-left: -9px;
-    background: #fff;
-    border-radius: 10px;
-    border: 4px solid rgb(255,80,80);
-    z-index: 10;
-}
-
-.direction-l .flag:after,
-.direction-r .flag:after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: -8px;
-    height: 0;
-    width: 0;
-    margin-left: -8px;
-    border: solid transparent;
-    border-bottom-color: rgb(255,255,255);
-    border-width: 8px;
-    pointer-events: none;
-}
-
-.time-wrapper {
-    display: block;
-    position: relative;
-    margin: 4px 0 0 0;
-    z-index: 14;
-}
-
-.direction-l .time-wrapper {
-    float: none;
-}
-
-.direction-r .time-wrapper {
-    float: none;
-}
-
-.desc {
-    position: relative;
-    margin: 1em 0 0 0;
-    padding: 1em;
-    background: rgb(245,245,245);
-    -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-    -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-    box-shadow: 0 0 1px rgba(0,0,0,0.20);
-    
-  z-index: 15;
-}
-
-.direction-l .desc,
-.direction-r .desc {
-    position: relative;
-    margin: 1em 1em 0 1em;
-    padding: 1em;
-    
-  z-index: 15;
-}
-
-}
-
-@media screen and (min-width: 400px ?? max-width: 660px) {
-
-.direction-l .desc,
-.direction-r .desc {
-    margin: 1em 4em 0 4em;
-}
-
-}
-
-/* ================ Timeline Media Queries ================ */
-
-@media screen and (max-width: 660px) {
-
-.timeline {
-    width: 100%;
-    padding: 4em 0 1em 0;
-}
-
-.timeline li {
-    padding: 2em 0;
-}
-
-.direction-l,
-.direction-r {
-    float: none;
-    width: 100%;
-
-    text-align: center;
-}
-
-.flag-wrapper {
-    text-align: center;
-}
-
-.flag {
-    background: rgb(255,255,255);
-    z-index: 15;
-}
-
-.direction-l .flag:before,
-.direction-r .flag:before {
-  position: absolute;
-  top: -30px;
-    left: 50%;
-    content: ' ';
-    display: block;
-    width: 12px;
-    height: 12px;
-    margin-left: -9px;
-    background: #fff;
-    border-radius: 10px;
-    border: 4px solid rgb(255,80,80);
-    z-index: 10;
-}
-
-.direction-l .flag:after,
-.direction-r .flag:after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: -8px;
-    height: 0;
-    width: 0;
-    margin-left: -8px;
-    border: solid transparent;
-    border-bottom-color: rgb(255,255,255);
-    border-width: 8px;
-    pointer-events: none;
-}
-
-.time-wrapper {
-    display: block;
-    position: relative;
-    margin: 4px 0 0 0;
-    z-index: 14;
-}
-
-.direction-l .time-wrapper {
-    float: none;
-}
-
-.direction-r .time-wrapper {
-    float: none;
-}
-
-.desc {
-    position: relative;
-    margin: 1em 0 0 0;
-    padding: 1em;
-    background: rgb(245,245,245);
-    -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-    -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-    box-shadow: 0 0 1px rgba(0,0,0,0.20);
-    
-  z-index: 15;
-}
-
-.direction-l .desc,
-.direction-r .desc {
-    position: relative;
-    margin: 1em 1em 0 1em;
-    padding: 1em;
-    
-  z-index: 15;
-}
-
+.thumbnail .caption {
+	color: inherit;
 }
 
 
@@ -446,10 +248,11 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	margin:0 auto;
 }
 
+
+
 /***********************************************************/
 /*                   Theme: text shadows                   */
 /***********************************************************/
-
 .text-shadows { 	
 	text-shadow:0 1px 2px rgba(0,0,0,.2);
 }
@@ -470,7 +273,6 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 /***********************************************************/
 /*                   Inverted theme                        */
 /***********************************************************/
-
 .theme-invert { 	
 	color:#222;
 	color:rgba(0,0,0,.8); 
@@ -507,7 +309,7 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 .theme-invert .title,
 .theme-invert .subtitle,
 .theme-invert .tagline { 
-	color:#222222; 
+	color:#222; 
 }
 
 .theme-invert .btn-default {
@@ -540,18 +342,33 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 
 
 
-/*Skills*/
-.skilltitle {
-text-align: right;
-font-weight: 600;
-padding-right: 0px;
+
+
+
+/*CE QUE JAI RAJOUTER */
+.icon {
+	width: 50%;
+	margin: auto;
+	box-sizing: inherit;
+	text-align: center;
+
 }
-.progress {
-border-radius: 0px;
-height: 15px;
-margin-top: 5px;
-background-color: #D6D6D6;
+
+.imgg{
+	
+	position: relative;
+    min-height: 1px;
+    padding: 20px;
 }
-.progress .progress-bar {
-background-color: #CC4646;
+
+.list {
+	line-height: 3em;
+	list-style: square;
+	font-size: 15px;
+	text-align: left;
 }
+
+ul {}
+
+
+
