@@ -345,7 +345,7 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 
 
 
-/*CE QUE JAI RAJOUTER */
+/*CE QUE JAI RAJOUTER*/
 .icon {
 	width: 50%;
 	margin: auto;
@@ -365,7 +365,7 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	line-height: 3em;
 	list-style: square;
 	font-size: 15px;
-	text-align: left;
+	
 }
 
 ul {}
