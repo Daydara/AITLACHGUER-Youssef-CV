@@ -167,6 +167,13 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	}
 }
 
+#skills i{
+	
+	font-size: 70px;
+	padding-bottom: 150px;
+	line-height: 1.5em;
+}
+
 
 /********************************************************/
 /*                   UI - Buttons                       */
@@ -346,19 +353,19 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 
 
 /*CE QUE JAI RAJOUTER*/
-.icon {
+/*.icon {
 	width: 50%;
 	margin: auto;
 	box-sizing: inherit;
 	text-align: center;
 
-}
+}*/
 
-.imgg{
+#skills i{
 	
-	position: relative;
-    min-height: 1px;
-    padding: 20px;
+	font-size: 70px;
+	padding-bottom: 150px;
+	line-height: 1.5em;
 }
 
 .list {
@@ -368,7 +375,6 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	
 }
 
-ul {}
 
 
 
